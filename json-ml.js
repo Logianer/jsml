@@ -9,6 +9,7 @@ function JsonMl(path, element) {
       function drawContent(obj) {
         if (typeof obj == "object") {
           for (let key in obj) {
+            console.log(obj[key]);
             if (obj[key].tag == "img") {
               temp += `<${obj[key].tag} src="${obj[key].src||''}" style="${obj[key].style||''}" class="${obj[key].class}" id="${obj[key].id||''}"/>`
             } else {
