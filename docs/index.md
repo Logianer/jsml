@@ -1,37 +1,36 @@
-## Welcome to GitHub Pages
+# Json Markup-Language
+json-ml (Json Markup-Lanuage) is a JavaScript libary for writing an html-website in json. It uses [jQuery](https://jquery.com) for that.
 
-You can use the [editor on GitHub](https://github.com/Logianer/json-ml/edit/latest/docs/index.md) to maintain and preview the content for your website in Markdown files.
+<a id="toc"></a>
+## Table of Contents
+1) [Installation](#install)
+2) [Usage](#main)
+      - [JSON Format](#format)
+          - [Common Elements](#elements)
+          - [Images](#image)
+3) [Common Errors](#trouble)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+## Installation
+<a id="install"></a>
+Install the libary by importing jQuery and json-ml in your `.html` file:
+```html
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Logianer/json-ml/json-ml.js" charset="utf-8"></script>
 ```
+It's as simple as that! You successfully installed json-ml!   
+**Please note that you need a webserver or the downloaded version of json-ml to work.**</p>
+[Table of Contents](#toc)
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Logianer/json-ml/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Usage
+<a id="main"></a>
+To use `json-ml` we add a `<script>` tag under the imported scripts and say:
+```js
+$("body").html(JsonMl("example.json"))
+```
+whereas "body" is the selected element and "example.json" the `.json` file with the "html" inside. More on that [here](#format). If you want a simple example, look at the template [here](https://github.com/Logianer/json-ml/tree/template)</p>
+[Table of Contents](#toc)   
+   
+   
+### JSON Format
+<a id="format"></a>
+The format is simple to understand. you have a root-key named `content`
