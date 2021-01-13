@@ -11,8 +11,9 @@ function JsonMl(path, element) {
           for (let key in obj) {
             if (obj[key].tag == "img") {
               temp += `<${obj[key].tag} src="${obj[key].src||''}" style="${obj[key].style||''}" class="${obj[key].class}" id="${obj[key].id||''}"/>`
+            } else {
+              temp += `<${obj[key].tag} style="${obj[key].style||''}"class="${obj[key].class||''}" id="${obj[key].id||''}">${drawContent(obj[key].content)||''}</${obj[key].tag}>`
             }
-            temp += `<${obj[key].tag} style="${obj[key].style||''}"class="${obj[key].class||''}" id="${obj[key].id||''}">${drawContent(obj[key].content)||''}</${obj[key].tag}>`
           }
           return temp;
         } else {
