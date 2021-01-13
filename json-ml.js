@@ -2,6 +2,9 @@ function JsonMl(path) {
   $.ajax({
     type: "GET",
     url: path,
+    headers:{
+    "Access-Control-Allow-Origin": *
+    },
     success: function(res) {
       var content = res.content
       var temp = "";
