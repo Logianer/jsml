@@ -20,7 +20,7 @@ function JsonMl(path, element) {
           return obj;
         }
       }
-      $(element).html(drawContent(content))
+      $(element).html(`<div>${drawContent(content)}</div>`)
     }
   })
 }
