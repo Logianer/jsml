@@ -17,8 +17,10 @@ function JsonMl(path, element) {
             }
           }
         } else {
+          console.log(obj);
           return obj;
         }
+        console.log(temp);
         return temp;
       }
       $(element).html(`${drawContent(content)}`)
