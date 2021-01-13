@@ -16,13 +16,12 @@ function JsonMl(path, element) {
               temp += `<${obj[key].tag} style="${obj[key].style||''}"class="${obj[key].class||''}" id="${obj[key].id||''}">${drawContent(obj[key].content)||''}</${obj[key].tag}>`
             }
           }
-
         } else {
           return obj;
         }
         return temp;
       }
-      $(element).html(`<div>${drawContent(content)}</div>`)
+      $(element).html(`${drawContent(content)}`)
     }
   })
 }
