@@ -1,4 +1,4 @@
-function JsonMl(path) {
+function JsonMl(path, element) {
   $.ajax({
     type: "GET",
     url: path,
@@ -19,7 +19,7 @@ function JsonMl(path) {
           return obj;
         }
       }
-      return drawContent(content);
+      $(element).html(drawContent(content))
     }
   })
 }
