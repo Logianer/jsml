@@ -17,7 +17,8 @@ Install the libary by importing jQuery and json-ml in your `.html` file:
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/Logianer/json-ml/json-ml.js" charset="utf-8"></script>
 ```
-It's as simple as that! You successfully installed json-ml!</p>
+It's as simple as that! You successfully installed json-ml!   
+**Please note that you need a webserver or the downloaded version of json-ml to work.**</p>
 [Table of Contents](#toc)
 
 ## Usage
@@ -27,4 +28,9 @@ To use `json-ml` we add a `<script>` tag under the imported scripts and say:
 $("body").html(JsonMl("example.json"))
 ```
 whereas "body" is the selected element and "example.json" the `.json` file with the "html" inside. More on that [here](#format). If you want a simple example, look at the template [here](https://github.com/Logianer/json-ml/tree/template)</p>
-[Table of Contents](#toc)
+[Table of Contents](#toc)   
+   
+   
+### JSON Format
+<a id="format"></a>
+The format is simple to understand. you have a root-key named `content`.
