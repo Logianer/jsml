@@ -33,4 +33,20 @@ whereas "body" is the selected element and "example.json" the `.json` file with 
    
 ### JSON Format
 <a id="format"></a>
-The format is simple to understand. you have a root-key named `content`.
+The format is simple to understand. you have a root-key named `content`. This is an Object-Array and each object represents one HTML-Element. Here's an example H1:  
+```json
+{
+      "tag":"h1",
+      "content":"This is underlined"
+}
+```
+##### Nesting
+You can also nest elements. For that, simply make the content of an element an Array:
+```json
+{
+      "tag":"h1",
+      "content":[{
+            "tag":""
+      }]
+}
+```
